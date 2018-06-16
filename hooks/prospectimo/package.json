@@ -1,0 +1,68 @@
+{
+  "_from": "prospectimo",
+  "_id": "prospectimo@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-cmh5n5Qzx3HexfW3MpoMhHBrCNJxnakHDPXeJMQz5JNJuJEbPIG5kctP/JhHKwqVsqvu5aCcD+JHwk0g+hVgMQ==",
+  "_location": "/prospectimo",
+  "_phantomChildren": {
+    "he": "1.1.1",
+    "lodash": "4.17.5"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "prospectimo",
+    "name": "prospectimo",
+    "escapedName": "prospectimo",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/prospectimo/-/prospectimo-3.0.0.tgz",
+  "_shasum": "73750a1ec9734f15ca9e3c2749bb70327864772f",
+  "_spec": "prospectimo",
+  "_where": "D:\\WebstormProjects\\QuantifiedTalk",
+  "author": {
+    "name": "P. Hughes",
+    "email": "peter@phugh.es",
+    "url": "http://www.phugh.es"
+  },
+  "bugs": {
+    "url": "https://github.com/phugh/prospectimo/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "async": "^2.6.0",
+    "british_american_translate": "^1.0.1",
+    "happynodetokenizer": "0.4.0",
+    "lex-helpers": "0.3.0",
+    "simplengrams": "0.3.2"
+  },
+  "deprecated": false,
+  "description": "Analyse the temporal orientation (time perspective) of a string.",
+  "homepage": "https://github.com/phugh/prospectimo",
+  "keywords": [
+    "psychology",
+    "prediction",
+    "prospection",
+    "time",
+    "orientation",
+    "temporal",
+    "analysis",
+    "predict",
+    "sentiment",
+    "NLP"
+  ],
+  "license": "CC-BY-NC-SA-3.0",
+  "main": "index.js",
+  "name": "prospectimo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phugh/prospectimo.git"
+  },
+  "version": "3.0.0"
+}

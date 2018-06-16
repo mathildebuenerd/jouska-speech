@@ -1,0 +1,40 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    },
+    "phonegap-plugin-speech-recognition": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    },
+    "com.dbaq.cordova.contactsPhoneNumbers": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.quantifiedtalk.test"
+    }
+  }
+}

@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
+
+* {
+    font-family: "Arimo", Roboto, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h1#app-title {
+    margin-top: 50px;
+}
+
+
+section.manageSMS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.fillButton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    /*padding: 25px;*/
+
+    /*background-color: white;*/
+    margin-bottom: 10px;
+}
+
+.linkFillButton {
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display:inline-block;
+    text-align:center;
+    width: 80vw;
+    padding: 25px 0;
+    border: 2px solid blue;
+    transition:0.3s ease all;
+    position:relative;
+}
+
+.linkFillButton::before {
+    transition:5s all ease;
+    position:absolute;
+    top:0;
+    left:50%;
+    right:50%;
+    bottom:0;
+    opacity:0;
+    content:'';
+    background-color:blue;
+    color: white;
+    z-index:-2;
+}
+
+.linkFillButton:hover {
+    color: white;
+}
+
+.linkFillButton:hover::before {
+    transition:5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.pink {
+    color: #FD6E88;
+    border-color: #FD6E88;
+}
+
+.pink::before {
+    background-color:#FD6E88;
+}
+
+.hide {
+    background-color: black;
+    padding: 15px;
+    color: white;
+}
+
+/*button.alreadyDone {*/
+/*border: none;*/
+/*background-color: lightgrey;*/
+/*color: dimgrey;*/
+/*!* Au final ce sera en visibility: hidden *!*/
+/*}*/
+
+/*******
+
+    Bottom navigation
+    Messages - Write - Stats
+
+ *******/
+
+
+nav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+nav a.nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .icon img {
+    height: 22px;
+    width: auto;
+}
+
+nav .nav-item-text {
+    font-size: 0.9em;
+}
+
+.nav-link.active {
+    color: blue;
+}
+
+nav ul li.nav-element {
+    overflow: hidden;
+}
+
+
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 50px;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+
+.bottom-nav ul li.nav-element {
+    width: 33vw;
+}
+
+
+/************
+
+    SECTIONS
+
+ ****/
+
+section.hidden {
+    display: none;
+}
+
+section.visible {
+
+}
+
+/********
+
+    Stats nav
+
+ */
+
+.stats-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 50px;
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
+}
+
+.stats-nav ul li.nav-element {
+    width: 50vw;
+}
+
+.stats-nav .nav-link {
+    height: 50px;
+}
+
+.stats-nav .active {
+    border-bottom:  4px solid blue;
+}
+
+#userStats, #contactsStats {
+    position: absolute;
+    top: 50px; /* on décale par rapport au menu qui fait 50px*/
+    padding-bottom: 50px;
+}
+
+
+/*********
+    WordLists
+ *********/
+
+ul.wordList li {
+    list-style-type: none;
+    padding: 5px;
+    border: 1px solid blue;
+    display: inline-flex;
+    margin: 10px;
+    color: blue;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+#manageSMS {
+    display: none;
+}
+
+/*********
+
+    App installation
+
+ *********/
+
+#installTheApp {
+    display: none;
+}
+
+#installTheApp h1 {
+    font-size: 1.7em;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+#installTheApp section {
+    display: flex;
+    flex-direction: column;
+}
+
+#installTheApp button {
+    margin-bottom: 10px;
+    background-color: white;
+    border: 2px solid blue;
+    color: blue;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#installTheApp button:hover, #installTheApp button:active {
+    background-color: blue;
+    color: white;
+}
+
+/************
+
+    Writing interface
+
+***********/
+
+section#writing {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#writing input#contactNumber, #writing #smsContent {
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid lightgrey;
+    font-size: 1.1em;
+    padding: 0 0 15px 0;
+    width: 100%;
+}
+
+input#contactNumber {
+    margin-bottom: 15px;
+}
+
+#warning {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+    color: red;
+}
+
+input#sendMessage {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #4f66ff;
+    color: white;
+    border: 0;
+    border-bottom: 3px solid #0800ff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input#contactNumber:focus, #smsContent:focus {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    /*-webkit-tap-highlight-color: transparent;  !* i.e. Nexus5/Chrome and Kindle Fire HD 7'*!*/
+}
+
+#feedback {
+    box-sizing: border-box;
+    padding: 0 0 20px 0;
+}
+
+#all-analyses {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#rec { /*le petit rond qui montre qu'on est en train d'analyser*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*background-color: red;*/
+    /*border-radius: 30px;*/
+    /*animation: blink 1s infinite;*/
+    display: none;
+}
+
+@keyframes blink {
+    0% {background-color: rgb(255,0,0)}
+    50% {background-color: rgb(255,255,255)}
+}
+
+.gauges {
+    display: flex;
+    width: 83vw;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.gauges .fill {
+    height: 20px;
+    width: 60vw;
+    background: url("../img/interface-components/jauges/jauge_8.png") no-repeat right;
+    background-size: contain;
+    /*background-repeat: no-repeat;*/
+    /*background-position: right;*/
+    /*transition: 1s ease;*/
+}
+
+.gauge-name {
+    margin: 5px 0 0 0;
+}
+
+.gauges > .gauge-name {
+    position: relative;
+    /*left: -50px;*/
+    color: blue;
+}
+
+.sub-gauges {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-sub-gauge {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.single-sub-gauge .fill {
+    width: 15px;
+    height: 15px;
+}
+
+#write {
+}
+
+#confirmationMessage {
+    margin-left: 10vw;
+}
+
+.negative span {
+    display: inline-block;
+    animation: 2s ease infinite;
+}
+
+@keyframes marionettes0 {
+    0% {  transform: rotate(-30deg);  }
+    50% {  transform: rotate(30deg);  }
+    100% {  transform: rotate(-30deg);  }
+}
+
+@keyframes marionettes1 {
+    0% {  transform: rotate(-10deg);  }
+    40% {  transform: rotate(40deg);  }
+    100% {  transform: rotate(-10deg);  }
+}
+@keyframes marionettes2 {
+    0% {  transform: rotate(30deg);  }
+    60% {  transform: rotate(-20deg);  }
+    100% {  transform: rotate(30deg);  }
+}
+
+
+/*********
+
+    Stats interface
+
+ *********/
+
+
+
+
+/****************
+
+    Messages interface
+
+ **********/
+
+
+/***
+    Menu paramètres/options
+    Choix des visualisations à afficher
+ ***/
+
+nav#options-visualisation {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    height: 100vh;
+    width: 50vw;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.1) 0 0 3px;
+    z-index: 1;
+    overflow: visible;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.5s ease;
+}
+
+#top-icon-nav-settings {
+    position: fixed;
+    top: -1px;
+    right: 0;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+nav#options-visualisation.active {
+    left:50vw;
+}
+
+#top-icon-nav-settings.active {
+    right: 50vw;
+}
+
+#top-icon-nav-settings img.icon {
+    width: 30px;
+    height: auto;
+}
+
+#list-analyses {
+    flex-direction: column;
+}
+
+.sub-list-analyses {
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.title-list-analyses {
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    display: inline-flex;
+}
+
+.item-list-analysis a {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.item-list-analysis a img.icon {
+    width: 15px;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+/***
+    Discussion thread
+ ***/
+
+#messages h2.contact-name {
+    position: fixed;
+    top: -1px;
+    left: 0;
+    padding: 0 0 0 15px;
+    background-color: white;
+    margin: 0;
+    height: 50px;
+    width: 100vw;
+    border: #ddd 1px solid;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+#messages h2.contact-name .name {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+#messages h2.contact-name .phonenumber {
+    font-weight: 100;
+    font-size: 0.6em;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+#messages .contact-name .previous-button {
+    margin-right: 15px;
+}
+
+#messages .previous-button img.icon {
+    width: 15px;
+}
+
+
+#discussion-thread {
+    background-color: #eee;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.singleSMS {
+    padding: 15px;
+    margin: 5px;
+    width: auto;
+    max-width: 70vw;
+}
+
+.smsText {
+    margin: 0;
+}
+
+.singleSMS.inbox {
+    background-color: white;
+}
+
+.singleSMS.sent {
+    color: white;
+    background-color: #4343ff;
+    align-self: flex-end;
+}
+
+.sentiment-negative {
+    /*padding-bottom: 2px;*/
+    /*border-bottom: 2px solid red;*/
+}
+
+.sentiment-positive {
+    /*padding-bottom: 4px;*/
+    /*border-bottom: 2px solid blue;*/
+}
+
+.selfish-negative {
+    padding-bottom: 2px;
+    /*border-bottom: 2px solid yellow;*/
+}
+
+.selfish-positive {
+    padding-bottom: 2px;
+    /*border-bottom: 2px solid greenyellow;*/
+}
+
+.selfish-positive span:nth-child(1) {animation: translate 1s infinite 0s; display: inline-flex;}
+.selfish-positive span:nth-child(2) {animation: translate 1s infinite 0.2s; display: inline-flex;}
+.selfish-positive span:nth-child(3) {animation: translate 1s infinite 0.4s; display: inline-flex;}
+.selfish-positive span:nth-child(4) {animation: translate 1s infinite 0.6s; display: inline-flex;}
+.selfish-positive span:nth-child(5) {animation: translate 1s infinite 0.8s; display: inline-flex;}
+.selfish-positive span:nth-child(6) {animation: translate 1s infinite 0s; display: inline-flex;}
+.selfish-positive span:nth-child(7) {animation: translate 1s infinite 0.2s; display: inline-flex;}
+.selfish-positive span:nth-child(8) {animation: translate 1s infinite 0.4s; display: inline-flex;}
+.selfish-positive span:nth-child(9) {animation: translate 1s infinite 0.6s; display: inline-flex;}
+.selfish-positive span:nth-child(10) {animation: translate 1s infinite 0.8s; display: inline-flex;}
+
+.selfish-negative span:nth-child(1) {animation: translateBottom 1s infinite 0s; display: inline-flex;}
+.selfish-negative span:nth-child(2) {animation: translateBottom 1s infinite 0.2s; display: inline-flex;}
+.selfish-negative span:nth-child(3) {animation: translateBottom 1s infinite 0.4s; display: inline-flex;}
+.selfish-negative span:nth-child(4) {animation: translateBottom 1s infinite 0.6s; display: inline-flex;}
+.selfish-negative span:nth-child(5) {animation: translateBottom 1s infinite 0.8s; display: inline-flex;}
+.selfish-negative span:nth-child(6) {animation: translateBottom 1s infinite 0s; display: inline-flex;}
+.selfish-negative span:nth-child(7) {animation: translateBottom 1s infinite 0.2s; display: inline-flex;}
+.selfish-negative span:nth-child(8) {animation: translateBottom 1s infinite 0.4s; display: inline-flex;}
+.selfish-negative span:nth-child(9) {animation: translateBottom 1s infinite 0.6s; display: inline-flex;}
+.selfish-negative span:nth-child(10) {animation: translateBottom 1s infinite 0.8s; display: inline-flex;}
+
+.sentiment-positive span:nth-child(1) {animation: animOpacity 1s infinite 0s}
+.sentiment-positive span:nth-child(2) {animation: animOpacity 1s infinite 0.2s}
+.sentiment-positive span:nth-child(3) {animation: animOpacity 1s infinite 0.4s}
+.sentiment-positive span:nth-child(4) {animation: animOpacity 1s infinite 0.6s}
+.sentiment-positive span:nth-child(5) {animation: animOpacity 1s infinite 0.8s}
+.sentiment-positive span:nth-child(6) {animation: animOpacity 1s infinite 0s}
+.sentiment-positive span:nth-child(7) {animation: animOpacity 1s infinite 0.2s}
+.sentiment-positive span:nth-child(8) {animation: animOpacity 1s infinite 0.4s}
+.sentiment-positive span:nth-child(9) {animation: animOpacity 1s infinite 0.6s}
+.sentiment-positive span:nth-child(10) {animation: animOpacity 1s infinite 0.8s}
+
+.sentiment-negative span:nth-child(1) {animation: rotate 1s infinite 0s; display: inline-flex;}
+.sentiment-negative span:nth-child(2) {animation: rotate 1s infinite 0.2s; display: inline-flex;}
+.sentiment-negative span:nth-child(3) {animation: rotate 1s infinite 0.4s; display: inline-flex;}
+.sentiment-negative span:nth-child(4) {animation: rotate 1s infinite 0.6s; display: inline-flex;}
+.sentiment-negative span:nth-child(5) {animation: rotate 1s infinite 0.8s; display: inline-flex;}
+.sentiment-negative span:nth-child(6) {animation: rotate 1s infinite 0s; display: inline-flex;}
+.sentiment-negative span:nth-child(7) {animation: rotate 1s infinite 0.2s; display: inline-flex;}
+.sentiment-negative span:nth-child(8) {animation: rotate 1s infinite 0.4s; display: inline-flex;}
+.sentiment-negative span:nth-child(9) {animation: rotate 1s infinite 0.6s; display: inline-flex;}
+.sentiment-negative span:nth-child(10) {animation: rotate 1s infinite 0.8s; display: inline-flex;}
+
+
+
+
+
+
+@keyframes translate {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(-8px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes translateBottom {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(8px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes animOpacity {
+    0% {opacity: 0}
+    50% {opacity: 1}
+    100% {opacity: 0}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(20deg)}
+    50% {transform: rotate(-30deg)}
+    100% {transform: rotate(20deg)}
+}
+
+@keyframes colorChanger {
+    0% {color:blue}
+    50% {color:red}
+    100% {color:blue}
+}
+
+@keyframes colorChanger2 {
+    0% {color:lawngreen}
+    50% {color:fuchsia}
+    100% {color:lawngreen}
+}
+
+@keyframes move {
+    0% {transform: translate(-50px, 50px)}
+    50%{transform: translate(20px, -10px)}
+    100% {transform: translate(-50px, 50px)}
+}
+
+@keyframes move2 {
+    0% {transform: translate(-10px, 20px)}
+    33%{transform: translate(30px, -5px)}
+    66%{transform: translate(0px, -40px)}
+    100% {transform: translate(-10px, 20px)}
+}
+
+@keyframes move3 {
+    0% {transform: translate(10px, -20px)}
+    33%{transform: translate(-10px, -35px)}
+    66%{transform: translate(30px, -5px)}
+    100% {transform: translate(10px, -20px)}
+}
+
+@keyframes move4 {
+    0% {transform: translate(30px, -30px)}
+    50%{transform: translate(0px, 20px)}
+    100% {transform: translate(30px, -30px)}
+}

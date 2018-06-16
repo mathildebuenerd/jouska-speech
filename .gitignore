@@ -1,0 +1,12 @@
+# IDE
+.idea/
+www/.idea/
+
+# node
+node_modules
+
+# personal files
+apiKeys.ts
+apiKeys.js
+apiKeys.js.map
+google-services.json

@@ -1,0 +1,67 @@
+{
+  "_from": "predictgender",
+  "_id": "predictgender@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-jX2c5s0sNJxu/4q30hV4nUUfaJv0JlPd15JI2lv99t+7iQo9iEfF1MuONgGbMyW8ziM/3CB26iUlVxbzlOzf2w==",
+  "_location": "/predictgender",
+  "_phantomChildren": {
+    "he": "1.1.1",
+    "lodash": "4.17.5"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "predictgender",
+    "name": "predictgender",
+    "escapedName": "predictgender",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/predictgender/-/predictgender-3.0.0.tgz",
+  "_shasum": "b763717aa6be65198c1f76fe2622d0c6b042c3d2",
+  "_spec": "predictgender",
+  "_where": "D:\\WebstormProjects\\QuantifiedTalk",
+  "author": {
+    "name": "P. Hughes",
+    "email": "peter@phugh.es",
+    "url": "http://www.phugh.es"
+  },
+  "bugs": {
+    "url": "https://github.com/phugh/predictgender/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "async": "^2.6.0",
+    "british_american_translate": "^1.0.1",
+    "happynodetokenizer": "^0.4.0",
+    "lex-helpers": "^0.3.0",
+    "simplengrams": "^0.3.2"
+  },
+  "deprecated": false,
+  "description": "Predict the gender of a string's author.",
+  "homepage": "https://github.com/phugh/predictgender",
+  "keywords": [
+    "psychology",
+    "prediction",
+    "gender",
+    "predict",
+    "sex",
+    "expression",
+    "sentiment",
+    "personality",
+    "data"
+  ],
+  "license": "CC-BY-NC-SA-3.0",
+  "main": "index.js",
+  "name": "predictgender",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phugh/predictgender.git"
+  },
+  "version": "3.0.0"
+}

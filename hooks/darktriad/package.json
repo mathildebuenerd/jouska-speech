@@ -1,0 +1,63 @@
+{
+  "_from": "darktriad",
+  "_id": "darktriad@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-+fR1o/Br6TOq6Uc11KgitNSQsJu7HgQvTeoyIQljXIRuP5X/LRjRc/ckPYdJvkNXE5SoanDPxL+Y87PS6dlbYw==",
+  "_location": "/darktriad",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "darktriad",
+    "name": "darktriad",
+    "escapedName": "darktriad",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/darktriad/-/darktriad-1.0.0.tgz",
+  "_shasum": "c3bacab7f72ae21218d31ba89a2cfe9383a8674c",
+  "_spec": "darktriad",
+  "_where": "D:\\WebstormProjects\\QuantifiedTalk",
+  "author": {
+    "name": "P. Hughes",
+    "email": "peter@phugh.es",
+    "url": "http://www.phugh.es"
+  },
+  "bugs": {
+    "url": "https://github.com/phugh/darktriad/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "happynodetokenizer": "0.2.1",
+    "lex-helpers": "0.0.5",
+    "simplengrams": "0.1.2"
+  },
+  "deprecated": false,
+  "description": "Analyse the dark triad (narcissism, Machiavellianism, and psychopathy) of a string.",
+  "homepage": "https://github.com/phugh/darktriad",
+  "keywords": [
+    "psychology",
+    "dark triad",
+    "prediction",
+    "narcissism",
+    "Machiavellianism",
+    "analysis",
+    "sentiment",
+    "psychopathy",
+    "sentiment",
+    "emotion"
+  ],
+  "license": "CC-BY-NC-SA-3.0",
+  "main": "index.js",
+  "name": "darktriad",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phugh/darktriad.git"
+  },
+  "version": "1.0.0"
+}

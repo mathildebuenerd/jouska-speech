@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.quantifiedtalk.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Jouska</name>
+    <description>
+        Messaging app that analyzes your emotions.
+    </description>
+    <author email="mathilde.buenerd@gmail.com" href="http://chilidesign.fr">
+        Math
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="phonegap-plugin-push" spec="^2.1.3">
+        <variable name="FCM_VERSION" value="11.6.2" />
+    </plugin>
+    <plugin name="cordova-plugin-media" spec="^5.0.2" />
+    <plugin name="phonegap-plugin-speech-recognition" spec="^0.3.0" />
+    <plugin name="cordova-sms-plugin" spec="^0.1.11" />
+    <plugin name="cordova-plugin-sms" spec="^1.0.5" />
+    <plugin name="com.dbaq.cordova.contactsPhoneNumbers" spec="~0.0.10" />
+    <engine name="android" />
+    <engine name="browser" spec="^5.0.3" />
+</widget>
